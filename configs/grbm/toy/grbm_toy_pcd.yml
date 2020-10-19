@@ -1,0 +1,6 @@
+name: "grbm_toy_pcd"
+include: "grbm_toy.yml"
+criterion:
+  family: "PCD"
+loss:
+  k: 1

@@ -1,0 +1,26 @@
+training:
+  batch_size: 100
+  n_its: 300000
+evaluator:
+  family: "BaseEvaluator"
+evaluate_options:
+  sample: True
+model:
+  family: "EBMResNet"
+  feature_net: "ResidualNet9"
+  scalar_net: "LinearAFSquare"
+  channels: 128
+  v_shape: !!python/tuple [3, 32, 32]
+  v_dim: 3072
+  h_dim: 0
+data:
+  dataset: "CelebA"
+  gauss_noise: False
+  flattened: False
+optim:
+  decay: 0.000
+  optimizer: "Adam"
+  lr: 0.00005
+  scheduler: "cosine"
+interval:
+  log: 10

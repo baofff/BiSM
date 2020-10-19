@@ -1,0 +1,15 @@
+name: "grbm_toy_vnce"
+include: "grbm_toy.yml"
+criterion:
+  family: "VNCE"
+loss:
+  nu: 1.
+  n_particles: 5
+  k: 1
+q:
+  family: "LinearBernoulliQ"
+  temperature: 0.1
+update:
+  n_inner_loops: 5
+debug:
+  use_true_post: False

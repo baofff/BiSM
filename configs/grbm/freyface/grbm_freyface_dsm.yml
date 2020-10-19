@@ -1,0 +1,6 @@
+name: "grbm_freyface_dsm"
+include: "grbm_freyface.yml"
+criterion:
+  family: "DSM"
+loss:
+  noise_std: 0.3  # fix

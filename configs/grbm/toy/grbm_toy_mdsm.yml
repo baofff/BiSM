@@ -1,0 +1,9 @@
+name: "grbm_toy_mdsm"
+include: "grbm_toy.yml"
+criterion:
+  family: "MDSM"
+loss:
+  sigma_begin: 0.05
+  sigma_end: 1.0
+  dist: "geometrical"
+  sigma0: 0.05  # fix

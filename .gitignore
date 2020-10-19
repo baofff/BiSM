@@ -1,0 +1,14 @@
+.idea
+draft.py
+*log*
+workspace
+*.pyc
+*/__pycache__
+*.png
+*.npy
+configs/tuning
+*tfevents*
+exps.txt
+hh.yml
+test.py
+draft

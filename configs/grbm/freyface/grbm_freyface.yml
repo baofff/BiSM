@@ -1,0 +1,24 @@
+training:
+  batch_size: 100
+  n_its: 20000
+data:
+  dataset: "FreyFace"
+  gauss_noise: False
+  use_val: True
+model:
+  family: "GRBM"
+  h_dim: 400
+  v_dim: 560
+optim:
+  decay: 0.000
+  optimizer: "Adam"
+  lr: 0.0002
+  scheduler: "const"
+evaluator:
+  family: "RBMEvaluator"
+evaluate_options:
+  sample: True
+  fisher: 100
+  log_likelihood: 100
+others:
+  ais: True

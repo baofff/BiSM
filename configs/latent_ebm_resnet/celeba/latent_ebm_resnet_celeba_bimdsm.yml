@@ -1,0 +1,15 @@
+name: "latent_ebm_resnet_celeba_bimdsm"
+include: "latent_ebm_resnet_celeba.yml"
+criterion:
+  family: "BiMDSM"
+loss:
+  inner_loss_type: "cond_fisher"
+  sigma_begin: 0.05
+  sigma_end: 1.2
+  dist: "linear"
+  sigma0: 0.1  # fix
+update:
+  n_unroll: 0
+  n_inner_loops: 5
+others:
+  sample_method: "via_q"

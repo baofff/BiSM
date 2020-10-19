@@ -1,0 +1,9 @@
+name: "ebm_resnet_mnist_mdsm_joint_unroll_fisher"
+include: "ebm_resnet_mnist.yml"
+criterion:
+  family: "MDSM"
+loss:
+  sigma_begin: 0.1
+  sigma_end: 3.0
+  dist: "geometrical"
+  sigma0: 0.1  # fix

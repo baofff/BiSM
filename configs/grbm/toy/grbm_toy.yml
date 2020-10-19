@@ -1,0 +1,24 @@
+training:
+  batch_size: 100
+  n_its: 100000
+data:
+  dataset: "Toy"
+  type: "checkerboard"
+model:
+  family: "GRBM"
+  h_dim: 4
+  v_dim: 2
+optim:
+  decay: 0.000
+  optimizer: "Adam"
+  lr: 0.001
+  scheduler: "const"
+evaluator:
+  family: "RBMEvaluator"
+evaluate_options:
+  plot_sample_scatter: True
+  plot_sample_density: True
+  log_likelihood: 200
+  fisher: 200
+others:
+  seed: 1234

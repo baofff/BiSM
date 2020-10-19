@@ -1,0 +1,4 @@
+name: "grbm_toy_ssm"
+include: "grbm_toy.yml"
+criterion:
+  family: "SSM"

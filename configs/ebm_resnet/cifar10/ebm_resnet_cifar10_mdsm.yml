@@ -1,0 +1,9 @@
+name: "ebm_resnet_cifar10_mdsm"
+include: "ebm_resnet_cifar10.yml"
+criterion:
+  family: "MDSM"
+loss:
+  sigma_begin: 0.05
+  sigma_end: 1.2
+  dist: "linear"
+  sigma0: 0.1  # fix

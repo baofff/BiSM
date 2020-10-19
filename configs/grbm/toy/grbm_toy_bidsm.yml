@@ -1,0 +1,14 @@
+name: "grbm_toy_bidsm"
+include: "grbm_toy.yml"
+criterion:
+  family: "BiDSM"
+loss:
+  noise_std: 0.05
+  inner_loss_type: "iwae"
+  k: 1
+update:
+  n_unroll: 5
+  n_inner_loops: 5
+q:
+  family: "LinearBernoulliQ"
+  temperature: 0.1

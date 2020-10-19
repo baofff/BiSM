@@ -1,0 +1,32 @@
+training:
+  batch_size: 100
+  n_its: 100000
+evaluator:
+  family: "BaseEvaluator"
+evaluate_options:
+  sample: True
+  cond_sample: True
+  classify: True
+  plot_posterior: True
+model:
+  family: "LatentEBMResNet"
+  feature_net: "ResidualNet6"
+  scalar_net: "LinearAFSquare"
+  channels: 64
+  h_dim: 50
+  v_shape: !!python/tuple [1, 32, 32]
+  v_dim: 1024
+q:
+  family: "Conv3GaussQ"
+data:
+  dataset: "Mnist"
+  gauss_noise: False
+  padding: True
+  flattened: False
+optim:
+  decay: 0.000
+  optimizer: "Adam"
+  lr: 0.0001
+  scheduler: "cosine"
+interval:
+  log: 10

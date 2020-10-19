@@ -1,0 +1,15 @@
+name: "latent_ebm_resnet_mnist_bimdsm"
+include: "latent_ebm_resnet_mnist.yml"
+criterion:
+  family: "BiMDSM"
+loss:
+  inner_loss_type: "cond_fisher"
+  sigma_begin: 0.1
+  sigma_end: 3.0
+  dist: "geometrical"
+  sigma0: 0.1  # fix
+update:
+  n_unroll: 0
+  n_inner_loops: 5
+others:
+  sample_method: "via_q"

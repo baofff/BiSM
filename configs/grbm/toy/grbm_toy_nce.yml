@@ -1,0 +1,6 @@
+name: "grbm_toy_nce"
+include: "grbm_toy.yml"
+criterion:
+  family: "NCE"
+loss:
+  nu: 1.

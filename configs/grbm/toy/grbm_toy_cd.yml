@@ -1,0 +1,6 @@
+name: "grbm_toy_cd"
+include: "grbm_toy.yml"
+criterion:
+  family: "CD"
+loss:
+  k: 5
