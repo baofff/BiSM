@@ -10,5 +10,6 @@ dependencies:
   - seaborn=0.9
   - scikit-learn=0.21
   - tqdm=4.36
+  - pyyaml=5.1
   - pip:
     - higher==0.2
